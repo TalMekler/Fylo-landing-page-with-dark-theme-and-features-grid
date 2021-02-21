@@ -1,0 +1,33 @@
+@mixin window_maxWidth($px) {
+    @media screen and (max-width: $px) {
+        @content;
+    }
+}
+@mixin window_minWidth($px) {
+    @media screen and (min-width: $px) {
+        @content;
+    }
+}
+
+@mixin trigger($dir, $length, $time: 0.5s, $delay: 0s) {
+    @if $dir == top {
+        transform: translate(0, -$length);
+    } @else if $dir == right {
+        transform: translate($length, 0);
+    } @else if $dir == bottom {
+        transform: translate(0, $length);
+    } @else if $dir == left {
+        transform: translate(-$length, 0);
+    }
+
+    opacity: 0;
+    visibility: hidden;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, 0);
+        transition: all $time ease;
+        transition-delay: $delay;
+    }
+}

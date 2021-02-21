@@ -1,0 +1,21 @@
+.trigger {
+    --i: 0;
+    --time: 0.9s;
+    --delay: calc(0.3s * var(--i));
+    &-top {
+        @include trigger(top, rem(50), var(--time), var(--delay));
+    }
+    &-right {
+        @include trigger(right, rem(50), var(--time), var(--delay));
+    }
+    &-bottom {
+        @include trigger(bottom, rem(50), var(--time), var(--delay));
+    }
+    &-left {
+        @include trigger(left, rem(50), var(--time), var(--delay));
+    }
+
+    @include window_maxWidth(rem(375)) {
+        --i: 0 !important;
+    }
+}

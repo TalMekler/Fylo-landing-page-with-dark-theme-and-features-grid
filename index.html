@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
+
+  <script src="/scripts/app.js" defer></script>
+</head>
+
+<body>
+  <header>
+
+    <div class="logo-wrapper">
+      <img src="/images/logo.svg" alt="Tal Mekler Developer">
+    </div>
+
+    <nav>
+      <div class="nav-item">
+        <a href="#">Features</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Team</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Sign In</a>
+      </div>
+    </nav>
+
+  </header>
+
+  <section class="hero">
+    <!-- <img src="/images/bg-curvy-desktop.svg" alt="Tal Mekler Developer" class="bg-bottom"> -->
+    <div class="bg-bottom"></div>
+
+    <div class="img-wrapper">
+      <img src="/images/illustration-intro.png" alt="Tal Mekler Developer">
+    </div>
+
+    <div class="hero__content">
+      <p class="heading">
+        All your files in one secure location, accessible anywhere.
+      </p>
+      <p class="hero__content__main">
+        Fylo stores all your most important files in one secure location. Access them wherever
+        you need, share and collaborate with friends family, and co-workers.
+      </p>
+      <a href="#">Get Started</a>
+    </div>
+
+
+  </section>
+
+  <section class="features">
+    <div class="features__container">
+
+      <div class="feature trigger trigger-top" style="--i: 0;">
+        <div class="feature__img-wrapper">
+          <img src="/images/icon-access-anywhere.svg" alt="Tal Mekler Developer">
+        </div>
+        <p class="heading">Access your files, anywhere</p>
+        <p class="feature__content">
+          The ability to use a smartphone, tablet, or computer to access your account means your
+          files follow you everywhere.
+        </p>
+      </div>
+
+      <div class="feature trigger trigger-top" style="--i: 1;">
+        <div class="feature__img-wrapper">
+          <img src="/images/icon-security.svg" alt="Tal Mekler Developer">
+        </div>
+        <p class="heading">Security you can trust</p>
+        <p class="feature__content">
+          2-factor authentication and user-controlled encryption are just a couple of the security
+          features we allow to help secure your files.
+        </p>
+      </div>
+
+      <div class="feature trigger trigger-top"  style="--i: 0;">
+        <div class="feature__img-wrapper">
+          <img src="/images/icon-collaboration.svg" alt="Tal Mekler Developer">
+        </div>
+        <p class="heading">Real-time collaboration</p>
+        <p class="feature__content">
+          Securely share files and folders with friends, family and colleagues for live collaboration.
+          No email attachments required.
+        </p>
+      </div>
+
+      <div class="feature trigger trigger-top" style="--i: 1;">
+        <div class="feature__img-wrapper">
+          <img src="/images/icon-any-file.svg" alt="Tal Mekler Developer">
+        </div>
+        <p class="heading">Store any type of file</p>
+        <p class="feature__content">
+          Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all
+          file types to be securely stored and shared.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="productive">
+    <div class="productive__container">
+      <div class="productive__container__img-wrapper trigger trigger-left">
+        <img src="/images/illustration-stay-productive.png" alt="Tal Mekler Developer">
+      </div>
+      <div class="productive__container__content trigger trigger-right">
+        <p class="heading">Stay productive, wherever you are</p>
+        <p class="desc top">
+          Never let location be an issue when accessing your files. Fylo has you covered for all of your file
+          storage needs.
+        </p>
+        <p class="desc">
+          Securely share files and folders with friends, family and colleagues for live collaboration. No email
+          attachments required.
+        </p>
+        <a href="#" class="cta">See how Fylo works <i class="fas fa-arrow-alt-circle-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="reviews__container">
+      <img class="quotes-bg" src="/images/bg-quotes.png" alt="Tal Mekler Developer">
+      <div class="review trigger trigger-left" style="--i: 0">
+        <p class="review__content">
+          Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
+          become a well-oiled collaboration machine.
+        </p>
+        <div class="review__profile">
+          <div class="review__profile__img-wrapper">
+            <img src="/images/profile-1.jpg" alt="Tal Mekler Developer">
+          </div>
+          <div class="review__profile__person">
+            <p class="review__profile__name">Satish Patel</p>
+            <p class="review__profile__desc">Founder & CEO, Huddle</p>
+          </div>
+        </div>
+      </div>
+      <div class="review trigger trigger-left" style="--i: 1;">
+        <p class="review__content">
+          Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
+          become a well-oiled collaboration machine.
+        </p>
+        <div class="review__profile">
+          <div class="review__profile__img-wrapper">
+            <img src="/images/profile-2.jpg" alt="Tal Mekler Developer">
+          </div>
+          <div class="review__profile__person">
+            <p class="review__profile__name">Bruce McKenzie</p>
+            <p class="review__profile__desc">Founder & CEO, Huddle</p>
+          </div>
+        </div>
+      </div>
+      <div class="review trigger trigger-left" style="--i: 2;">
+        <p class="review__content">
+          Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
+          become a well-oiled collaboration machine.
+        </p>
+        <div class="review__profile">
+          <div class="review__profile__img-wrapper">
+            <img src="/images/profile-3.jpg" alt="Tal Mekler Developer">
+          </div>
+          <div class="review__profile__person">
+            <p class="review__profile__name">Iva Boyd</p>
+            <p class="review__profile__desc">Founder & CEO, Huddle</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-us">
+    <div class="bg-top"></div>
+    <div class="bg-bottom"></div>
+
+    <div class="contact-us__container trigger trigger-bottom">
+      <p class="heading">Get early access today</p>
+      <p class="desc">
+        It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
+        questions, our support team would be happy to help you.
+      </p>
+      <div class="cta">
+        <div class="input-wrapper">
+          <input type="email" name="email" id="email" placeholder="example@example.com">
+        </div>
+        <p class="cta__btn">Get Started For Free</p>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="img-wrapper">
+      <img src="/images/logo.svg" alt="Tal Mekler Developer">
+    </div>
+    <div class="footer__content trigger trigger-left" style="--i: 0;">
+      <p class="location">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua
+      </p>
+      <div class="contact trigger-left trigger" style="--i: 1;">
+        <p class="contact__item phone-number">
+          <img src="/images/icon-phone.svg" alt="Tal Mekler Developer">
+          +1-543-123-4567
+        </p>
+        <p class="contact__item email">
+          <img src="/images/icon-email.svg" alt="Tal Mekler Developer">  
+          example@fylo.com
+        </p>
+      </div>
+      <div class="navigation trigger-left trigger" style="--i: 2;">
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Jobs</a>
+        <a href="#">Terms</a>
+        <a href="#">Press</a>
+        <a href="#">Privacy</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="social trigger-left trigger" style="--i: 3;">
+        <div class="social__icon-wrapper"><i class="fab fa-facebook-f"></i></div>
+        <div class="social__icon-wrapper"><i class="fab fa-twitter"></i></div>
+        <div class="social__icon-wrapper"><i class="fab fa-instagram"></i></div>
+      </div>
+    </div>
+  </footer>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://tal-mekler.com">Tal Mekler</a>.
+    </p>
+  </footer>
+
+
+  
+</body>
+
+</html>

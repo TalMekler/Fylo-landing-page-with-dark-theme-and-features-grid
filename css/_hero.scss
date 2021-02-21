@@ -1,0 +1,87 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: $primary-clr1;
+    .bg-bottom {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+        background: url(/images/bg-curvy-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: 0 100%;
+
+        @include window_maxWidth(rem(375)) {
+            background: url(/images/bg-curvy-mobile.svg);
+            background-repeat: no-repeat;
+            background-position: 0 100%;
+        }
+    }
+
+    .img-wrapper {
+        width: rem(720);
+        height: auto;
+        margin-bottom: rem(45);
+        z-index: 2;
+        @include window_maxWidth(rem(375)) {
+            width: rem(275);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+
+        .heading {
+            text-align: center;
+            max-width: rem(684);
+            font-size: rem(32);
+            line-height: rem(48);
+            color: white;
+            font-weight: $fw2;
+            margin-bottom: rem(20);
+        }
+
+        &__main {
+            color: white;
+            text-align: center;
+            max-width: rem(582);
+            font-size: rem(19);
+            line-height: rem(28);
+            opacity: 0.75;
+            margin-bottom: rem(34);
+            @include window_maxWidth(rem(375)){
+                padding-left: rem(30);
+                padding-right: rem(30);
+            }
+        }
+
+        a {
+            padding: rem(16) rem(95);
+            color: white;
+            background: linear-gradient(90deg, $accent-clr1, $accent-clr2);
+            border-radius: rem(30);
+            border: 0;
+            outline: 0;
+            transition: all 0.25s ease-in-out;
+            margin-bottom: rem(159);
+
+            &:hover {
+                filter: brightness(1.4);
+            }
+        }
+    }
+}

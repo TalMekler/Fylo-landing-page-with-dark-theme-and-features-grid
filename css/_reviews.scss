@@ -1,0 +1,80 @@
+.reviews {
+    background: $primary-clr2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: rem(200);
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(rem(350), 1fr));
+        gap: rem(40);
+        max-width: rem(1160);
+        position: relative;
+
+        @include window_maxWidth(rem(375)) {
+            grid-template-columns: repeat(1, 1fr);
+            max-width: rem(255);
+        }
+
+        .quotes-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-20%, -80%);
+            z-index: 0;
+        }
+
+        .review {
+            background: $primary-clr4;
+            padding: rem(40) rem(24);
+            border-radius: rem(7);
+            box-shadow: rem(2.5) rem(5) rem(10) rgba(white, .05);
+            z-index: 1;
+            &__content {
+                color: white;
+                font-size: rem(15);
+                line-height: rem(22.5);
+                margin-bottom: rem(28);
+            }
+
+            &__profile {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                
+
+                &__img-wrapper {
+                    width: rem(40);
+                    height: rem(40);
+                    border-radius: 50%;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                &__person {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    margin-left: rem(11);
+                    color: white;
+                }
+
+                &__name {
+                    font-weight: $fw2;
+                    font-size: rem(13);
+                }
+
+                &__desc {
+                    font-size: rem(13);
+                }
+            }
+        }
+    }
+}

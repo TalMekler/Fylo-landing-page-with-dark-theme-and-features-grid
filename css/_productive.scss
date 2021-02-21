@@ -1,0 +1,80 @@
+.productive {
+    background: $primary-clr2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: rem(144);
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: rem(1220);
+        @include window_maxWidth(rem(375)) {
+            flex-direction: column;
+            padding: 0 rem(24);
+        }
+
+        &__img-wrapper {
+            margin-right: rem(56);
+            max-width: rem(615);
+            width: 50%;
+
+            @include window_maxWidth(rem(375)) {
+                width: rem(275);
+                margin: 0;
+                margin-bottom: rem(50);
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            color: white;
+
+            @include window_maxWidth(rem(375)) {
+                text-align: left;
+            }
+
+            .heading {
+                font-weight: $fw2;
+                font-size: rem(30);
+                max-width: rem(335);
+                margin-bottom: rem(25);
+            }
+
+            .desc {
+                max-width: rem(563);
+                font-size: ren(10);
+
+                &.top {
+                    margin-bottom: rem(20);
+                }
+            }
+
+            .cta {
+                margin-top: rem(27);
+                color: $accent-clr1;
+                border-bottom: rem(2) solid $accent-clr1;
+                cursor: pointer;
+                transition: all .25s ease-in-out;
+
+                &:hover {
+                    color: white;
+                    border-bottom-color: white;
+                }
+
+                i {
+                    margin-left: rem(6);
+                }
+            }
+        }
+    }
+}

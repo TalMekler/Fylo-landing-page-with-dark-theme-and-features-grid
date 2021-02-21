@@ -1,0 +1,131 @@
+.contact-us {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .bg-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: $primary-clr2;
+        z-index: -1;
+    }
+    .bg-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: $primary-clr3;
+        z-index: -1;
+    }
+
+    &__container {
+        max-width: rem(865);
+        color: white;
+        background: $primary-clr1;
+        border-radius: rem(10);
+        padding: rem(50) rem(80) rem(42);
+        box-shadow: 0 0 rem(15) rgba(black, .2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include window_maxWidth(rem(375)) {
+            max-width: rem(305);
+            padding: rem(40) rem(26);
+        }
+
+        .heading {
+            font-weight: $fw2;
+            font-size: rem(30);
+            margin-bottom: rem(28);
+            @include window_maxWidth(rem(375)) {
+                text-align: center;
+            }
+        }
+
+        .desc {
+            font-size: rem(15);
+            text-align: center;
+            margin-bottom: rem(42);
+        }
+
+        .cta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            @include window_maxWidth(rem(375)) {
+                flex-direction: column;
+                width: rem(255);
+            }
+
+            .input-wrapper {
+                flex: 1;
+                margin-right: rem(28);
+                position: relative;
+
+                @include window_maxWidth(rem(375)) {
+                    margin: 0 0 rem(20) 0;
+                }
+
+                &::after {
+                    content: "Please enter valid email address";
+                    color: $accent-clr3;
+                    font-weight: $fw2;
+                    position: absolute;
+                    left: rem(32);
+                    top: 100%;
+                    margin-top: rem(8);
+                    font-size: rem(11);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all .15s ease-in-out;
+
+                    @include window_maxWidth(rem(375)) {
+                        width: fit-content;
+                        margin: 0;
+                        top: 0;
+                        left: 50%;
+                        box-sizing: content-box;
+                        transform: translate(-50%, -125%);
+                    }
+                }
+
+                &.error {
+                    &::after {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+
+                input {
+                    width: 100%;
+                    padding: rem(18) rem(32);
+                    border-radius: rem(30);
+                    outline: none;
+                    border: none;
+                    font-size: rem(15);
+                    font-family: $ff2;
+                }
+            }
+
+            &__btn {
+                font-weight: $fw2;
+                padding: rem(18) rem(32);
+                background: linear-gradient(to right, $accent-clr1, $accent-clr2);
+                border-radius: rem(30);
+                cursor: pointer;
+                transition: all .25s ease-in-out;
+
+                &:hover {
+                    filter: brightness(1.4);
+                }
+            }
+        }
+    }
+}
