@@ -30,3 +30,13 @@ triggers.forEach((t) => {
 
     })
 })
+
+// SVG SCRIPTS
+const svg = document.querySelector(".svg-check");
+const inside_svg = svg.querySelectorAll("*");
+
+inside_svg.forEach((elem) => {
+    setTimeout(() => {
+        elem.classList.add("show");
+    }, 1000);
+})
